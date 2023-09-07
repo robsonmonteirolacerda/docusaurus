@@ -2,12 +2,35 @@
 slug: Primeiro-post
 title: Referências de Markdown
 authors: [rob]
-tags: [docusaurus]
+tags: [markdown]
 ---
 
 Guia resumido de Referências para Markdown.
 
 <!--truncate-->
+
+# Titulação
+
+```bash
+# Título <h1>
+## Título <h2>
+### Título <h3>
+#### Título <h4>
+##### Título <h5>
+###### Título <h6>
+
+```
+Exemplos de titulação
+
+# Título 
+## Título 
+### Título 
+#### Título 
+##### Título 
+###### Título 
+
+
+# Ênfase
 
 Para adicionar ênfase ao conteúdo que será escrito, usa-se o asterisco * ou traço-baixo (underline) _:
 
@@ -48,7 +71,6 @@ Para ordenação utilize o número seguido de ponto `.`
 3. Terceiro
 
 
-
 # Links
 
  * Texto-âncora: Utiliza os caracteres `[]()`. 
@@ -60,6 +82,112 @@ Para ordenação utilize o número seguido de ponto `.`
     Exemplo: <https://pipz.com/br/>
 
 
-Vivamus hendrerit vestibulum ex, vel blandit nisl tristique sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc facilisis efficitur nisi, quis tempus ipsum pretium quis. Pellentesque id nisi arcu. Mauris pretium dapibus vulputate. Proin fermentum bibendum varius. Vivamus quis ullamcorper lectus. Pellentesque condimentum massa vitae mi fermentum bibendum.
+# Imagens 
 
-Donec feugiat sit amet risus cursus convallis. Phasellus tincidunt felis at dapibus pulvinar. Vestibulum eget felis vel ante accumsan facilisis in a dolor. Suspendisse odio velit, fermentum vel lobortis vitae, sagittis congue justo. Cras at euismod urna, vitae sagittis justo. Quisque sollicitudin viverra mauris vitae gravida. Vivamus porttitor facilisis aliquam. Vestibulum pretium, dui in pharetra commodo, justo ipsum mollis odio, nec congue lorem massa quis quam. Proin iaculis vulputate augue at dignissim.
+Adicionar uma imagem ao texto é semelhante ao inserir links-âncora. Basta adicionar uma exclamação `!`
+
+```bash
+![Alt ou título da imagem](URL da imagem)
+```
+Este é um exemplo ![gatinho](https://img.freepik.com/fotos-gratis/bela-foto-de-um-gatinho-branco-de-pelo-curto-britanico_181624-57681.jpg)
+
+#Citação (Quote)
+
+Use o sinal > no inicioda linha, para transformar um texto em uma citação ou comentário, semelhante ao código HYML `<blockquote>`
+```bash
+>Esta linha é um *blockquote*. O sinal usado abre e fecha este código no HTML. 
+>Para adicionar mais uma linha à citação, basta teclar Enter para um novo
+>código sinal. Isso gerará um novo parágrafo dentro de *blockquote*.
+>Códigos de **negrito**, _itálico_ e <https://links.com> funcionam aqui.
+```
+>Esta linha é um *blockquote*. O sinal usado abre e fecha este código no HTML.
+Para adicionar mais uma linha à citação, basta teclar Enter para um novo
+código sinal. Isso gerará um novo parágrafo dentro de *blockquote*.
+Códigos de **negrito**, _itálico_ e <https://links.com> funcionam aqui.
+
+# Código (Code Highlight)
+
+Temos dois modos de adicionar trechos de código ao Markdown:
+
+* Código em linha (_inline_): Acentro grave ``` ` ``` no início e no final do código.
+* Mútiplas linhas de código: Três aceontos graves ` ``` ` ou três tils ` ~~~ `
+
+```bash
+ Esta é uma linha que contém um ˋcódigoˋ.
+
+ ˋˋˋ
+Esta é uma linha de código
+ ˋˋˋ
+```
+É possivel especificar o nome da linguagem que está sendo apresentada no bloco de código, basta adicionar o nome referente da linguagem de programação após o  ` ```  ` ou ` ~~~`, por exemplo ` ~~~javascript ` ou `~~~ruby `
+
+```bash
+~~~javascript
+Esta é uma linha de código em Javascript.
+~~~
+
+~~~php
+Esta é uma linha de código em PHP.
+~~~
+
+~~~html
+Esta é uma linha de código em HTML.
+~~~
+```
+
+```javascript
+Esta é uma linha de código em Javascript.
+```
+
+```php
+Esta é uma linha de código em PHP.
+```
+
+```html
+Esta é uma linha de código em HTML.
+```
+
+# Tabela
+
+Escolha os títulos das colunas e use | para delimitar as colunas. Depois, utilize hífen - na segunda linha para indicar que acima estão os títulos das colunas, usando novamente o | para delimitar colunas. Veja um exemplo abaixo:
+
+```bash
+
+Exemplo   | Valor do exemplo
+--------- | ------
+Exemplo 1 | R$ 10
+Exemplo 2 | R$ 8
+Exemplo 3 | R$ 7
+Exemplo 4 | R$ 8
+
+```
+Exemplo   | Valor do exemplo
+--------- | ------
+Exemplo 1 | R$ 10
+Exemplo 2 | R$ 8
+Exemplo 3 | R$ 7
+Exemplo 4 | R$ 8
+
+Para especificar o tipo de alinhamento que deseja ter nas tabelas, utilize : ao lado do campo horizontal de hífens ---, na segunda linha da sua tabela. Veja abaixo:
+
+* Alinhado a esquerda: usar `:` no lado esquerdo (alinhamento padrão);
+* Alinhado a direita: usar `:` no lado direito;
+* Centralizado: usar `:` dos dois lados.
+
+Veja no exemplo:
+
+```bash
+Alinhado a esquerda | Centralizado | Alinhado a direita
+:--------- | :------: | -------:
+Valor | Valor | Valor
+```
+Alinhado a esquerda | Centralizado | Alinhado a direita
+:--------- | :------: | -------:
+Valor | Valor | Valor
+
+
+creditos:
+
+[Pipz Academy][def]
+
+[def]: https://pipz.com/br/
